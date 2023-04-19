@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: salmon;
+  font-family: "Courier New", Courier, monospace;
+}
+
+img {
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  z-index: 2;
+}
+
+.clock {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  border: 5px solid darkgrey;
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.7);
+}
+
+.numbers div {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  color: darkgreen;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.twelve {
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.three {
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.six {
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nine {
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrows {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows::before {
+  content: "";
+  background-color: darkgreen;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  z-index: 7;
+}
+
+.arrows div {
+  position: absolute;
+  background-color: white;
+  width: 7px;
+  height: 120px;
+  transform-origin: bottom center;
+  bottom: 50%;
+  z-index: 3;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.arrows .hour {
+  height: 70px;
+  transform: rotate(30deg);
+  z-index: 5;
+  background-color: wheat;
+}
+
+.arrows .minute {
+  height: 110px;
+  transform: rotate(deg);
+  z-index: 4;
+}
+
+.arrows .second {
+  transform: rotate(250deg);
+  background-color: goldenrod;
+  width: 4px;
+  z-index: 6;
+}
+
+.date-container {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: wheat;
+  border: 2px inset darkgrey;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  width: 60px;
+}
+
+.date-container .date-text {
+  padding: 2px 5px 2px 5px;
+  text-align: center;
+}
